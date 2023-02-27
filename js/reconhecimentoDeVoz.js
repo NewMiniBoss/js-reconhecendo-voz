@@ -19,6 +19,4 @@ function exibiChuteNaTela(chute) {
     `
 }
 
-function verificaValorValido() {
-
-}
+recognition.addEventListener('end', () => recognition.start());
