@@ -19,6 +19,7 @@ function verificaValorValido(chute) {
         document.body.innerHTML = `
         <h2>Você acerto o número secreto!</h2>
         <h3>O número secreto é: ${numero}</h3>
+        <button id="newGame" class="btn-jogar">Jogar Novamente</button>
         `
     } else if (numero < numeroSecreto) {
         elementoChute.innerHTML += `
@@ -30,3 +31,9 @@ function verificaValorValido(chute) {
         `
     }
 }
+
+document.body.addEventListener('click', (evento) => {
+    if (evento.target.id == 'newGame') {
+        window.location.reload();
+    }
+})
